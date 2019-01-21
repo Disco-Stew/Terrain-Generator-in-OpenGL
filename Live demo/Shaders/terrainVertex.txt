@@ -1,0 +1,43 @@
+#version 330 core
+
+layout (location = 0) in vec3 position; 
+layout (location = 1) in vec3 normal;
+layout (location = 2) in vec2 textureCoords;
+
+out vec3 normalCalc, lightDir;
+out float height;
+out vec2 texCoords;
+out mat3 normalMat;
+out vec4 diffuse, ambient;
+
+uniform mat4 model;
+uniform mat4 view; 
+uniform mat4 projection;
+
+void main()
+{	
+	/* first transform the normal into eye space and normalize the result */
+	normalMat = mat3(transpose(inverse(model*view)));
+
+	normalCalc = normalize(normalMat * normal);
+	
+	/* now normalize the light's direction. Note that according to the
+	OpenGL specification, the light is stored in eye space. Also since 
+	we're talking about a directional light, the position field is actually 
+	direction */
+	lightDir = vec3(10.0f, 10.0f, 0.0f);
+
+	ambient = vec4(0.4, 0.4, 0.4, 1.0) * vec4(1.0f, 1.0f, 1.0f, 1.0f); 
+	diffuse = vec4(0.6, 0.6, 0.6, 1.0) * vec4(1.0f, 1.0f, 1.0f, 1.0f); 
+	/* Normalize the halfVector to pass it to the fragment shader */
+	
+	
+	height = position.y;	
+	
+	gl_Position = projection * view * model * vec4(position.x, position.y, position.z, 1.0);
+	
+	texCoords = vec2(textureCoords.x, 1 - textureCoords.y);
+	
+	
+	
+} 

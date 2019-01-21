@@ -1,0 +1,13 @@
+#version 330 core 
+
+in vec2 texCoords;
+//in vec3 normalCalc;
+
+uniform sampler2D textureID;
+
+out vec4 color;
+
+void main()
+{
+	color = texture(textureID, texCoords);
+}

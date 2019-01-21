@@ -1,0 +1,60 @@
+#version 330 core
+
+in vec3 normalCalc;
+in vec2 texCoords;
+in float height;
+in mat4 normalMat;
+uniform float terrmedheight;
+
+out vec4 colorOut;
+
+uniform sampler2D rockTexture;
+uniform sampler2D sandTexture;
+uniform sampler2D grassTexture;
+uniform sampler2D snowTexture;
+
+void main()
+{
+	vec4 color;
+	vec4 texel0,texel1,texel2,texel3,finaltexel;
+	
+	/* a fragment shader can't write a verying variable, hence we need
+	a new variable to store the normalized interpolated normal */
+	n = normalize(normal);
+		
+	texel0 = texture(rockTexture, texCoords);
+	texel1 = texture(sandTexture, texCoords);
+	texel2 = texture(grassTexture, texCoords);
+	texel3 = texture(snowTexture, texCoords);
+	vec3 tmp = vec3(0.0,1.0,0.0);
+	tmp = normalMat * tmp;
+	slope = max(dot(n,tmp),0.0);
+	if(height>terrmedheight+100.0)
+	{
+		slope = pow(slope,8.0);
+		finaltexel = texel3 * (slope) + texel0 * (1.0 - slope);
+	}
+	else if(height>terrmedheight+97.0)
+	{
+		slope = pow(slope,5.0);
+		finaltexel = (((height-(terrmedheight+97.0))/3.0)* texel3 + (((terrmedheight+100.0)-height)/3.0)*texel2) * (slope) + texel0 * (1.0 - slope);
+	}
+	else if(height>terrmedheight+25.0)
+	{
+		slope = pow(slope,3.0);
+		finaltexel = texel2 * (slope) + texel0 * (1.0 - slope);
+	}
+	else if(height>terrmedheight+22.0)
+	{
+		slope = pow(slope,3.0);
+		finaltexel = (((height-(terrmedheight+22.0))/3.0)* texel2 + (((terrmedheight+25.0)-height)/3.0)*texel1) * (slope) + texel0 * (1.0 - slope);
+	}
+	else
+	{
+		slope = pow(slope,3.0);
+		finaltexel = texel1 * (slope) + texel0 * (1.0 - slope);
+	}
+	
+	colorOut = finaltexel;
+	
+}

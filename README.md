@@ -1,1 +1,0 @@
-# Terrain generator in OpenGL

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GameWorlds">
+      <UniqueIdentifier>{3ec92aba-688f-45d5-87b0-01fe0d29c183}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AssetManagement">
+      <UniqueIdentifier>{6d5d8423-ed95-43dd-af63-e04821384592}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cameras">
+      <UniqueIdentifier>{37dfa61c-d158-4875-a73a-cadaac6fead3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ProceduralGeneration">
+      <UniqueIdentifier>{f77d9179-3dc2-45a6-8b22-fd3d96082b84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ProceduralGeneration\Terrain">
+      <UniqueIdentifier>{41f115f2-a17f-420b-80dc-41199539be5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameObjects">
+      <UniqueIdentifier>{07447a85-1bc4-474d-8338-f98099aa9017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameWorlds">
+      <UniqueIdentifier>{4a962efa-625e-468e-b497-07daff7b8e08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AssetManagement">
+      <UniqueIdentifier>{c414b88a-a5d5-47a9-8ef4-63ef0954aef2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cameras">
+      <UniqueIdentifier>{ae66e0c8-efcc-48e5-abb3-8108ec02e485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObjects">
+      <UniqueIdentifier>{14fe3edd-fd38-4a04-a13c-44b4c4543ee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ProceduralGeneration">
+      <UniqueIdentifier>{5b6cf0d6-7012-4272-a0b5-4479d2d8303b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ProceduralGeneration\Terrain">
+      <UniqueIdentifier>{b19faade-0bbf-47b6-87ab-42d612d12e2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EntryPoint">
+      <UniqueIdentifier>{abc71e82-843a-4509-bb83-1a054d446382}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Source Files\ProceduralGeneration\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Water.cpp">
+      <Filter>Source Files\ProceduralGeneration\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="FractalNoise.cpp">
+      <Filter>Source Files\ProceduralGeneration</Filter>
+    </ClCompile>
+    <ClCompile Include="ProceduralGrid.cpp">
+      <Filter>Source Files\ProceduralGeneration</Filter>
+    </ClCompile>
+    <ClCompile Include="Helper.cpp">
+      <Filter>Source Files\AssetManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainWorld.cpp">
+      <Filter>Source Files\GameWorlds</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\Cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Orientation.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyBox.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files\AssetManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\EntryPoint</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vertex.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="fragment.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="FractalNoise.h">
+      <Filter>Header Files\ProceduralGeneration</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWorld.h">
+      <Filter>Header Files\GameWorlds</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainWorld.h">
+      <Filter>Header Files\GameWorlds</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files\AssetManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="info.h">
+      <Filter>Header Files\AssetManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Helper.h">
+      <Filter>Header Files\AssetManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Header Files\ProceduralGeneration\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Water.h">
+      <Filter>Header Files\ProceduralGeneration\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="ProceduralGrid.h">
+      <Filter>Header Files\ProceduralGeneration</Filter>
+    </ClInclude>
+    <ClInclude Include="Noise.h">
+      <Filter>Header Files\ProceduralGeneration</Filter>
+    </ClInclude>
+    <ClInclude Include="NoiseType.h">
+      <Filter>Header Files\ProceduralGeneration</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Orientation.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBox.h">
+      <Filter>Header Files\GameObjects</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
