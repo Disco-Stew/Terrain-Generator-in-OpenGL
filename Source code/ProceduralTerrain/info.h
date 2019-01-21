@@ -10,9 +10,5 @@
 // Only one helper required
 static Helper helper;
 
-//static Controls controls;
-
-//const GLuint WIDTH = 200;
-//const GLuint HEIGHT = 200;
 const GLuint WIDTH = 1333;
 const GLuint HEIGHT = 768;

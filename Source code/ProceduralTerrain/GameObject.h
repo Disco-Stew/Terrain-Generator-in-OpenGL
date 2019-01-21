@@ -1,11 +1,11 @@
 #pragma once
 #include <iostream>
 #include <glm/glm.hpp>
-#include "Shader.h"
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include "Orientation.h"
 
+#include "Shader.h"
+#include "Orientation.h"
 #include "info.h"
 
 typedef struct

@@ -38,8 +38,6 @@ Shader::Shader(const GLchar* vertexFilePath, const GLchar* fragmentFilePath)
 		std::cout << "Shader ERROR: File not opened. " << std::endl;
 	}
 
-
-	// c style stuff
 	const GLchar* vertexStringBuffer = vertexString.c_str();
 	const GLchar* fragmentStringBuffer = fragmentString.c_str();
 

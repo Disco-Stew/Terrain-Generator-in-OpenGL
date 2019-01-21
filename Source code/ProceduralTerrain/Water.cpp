@@ -1,4 +1,4 @@
-//Class to create a plane of water across the terrain. Nearly implementing but some bugs were stopping it from working correctly
+//Class to create a plane of water across the terrain. Nearly implemented but some bugs were stopping it from working correctly
 #include "Water.h"
 #include "SOIL.h"
 
@@ -7,7 +7,6 @@ Water::Water(char* imagePath)
 {
 	shaderProgram = new Shader("Shaders/waterVertex.txt", "Shaders/waterFragment.txt");
 		
-	
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, textureID);
 	int w, h;
@@ -50,6 +49,7 @@ void Water::Render(glm::mat4 view, glm::mat4 projection, float time)
 	glDisableVertexAttribArray(0);
 	glDisableVertexAttribArray(1);
 	glDisableVertexAttribArray(2);
+
 	// bind with 0, so, switch back to normal pointer operation
 	glBindVertexArray(0);
 	

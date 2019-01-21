@@ -80,15 +80,6 @@ SkyBox::SkyBox()
 	faces.push_back("skybox/back.bmp");
 	faces.push_back("skybox/front.bmp");
 	texture = loadCubeMap(faces);
-	
-
-	//int width, height;
-	//unsigned char* image = SOIL_load_image("picture.jpg", &width, &height, 0, SOIL_LOAD_RGB);
-	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
-	//glGenerateMipmap(GL_TEXTURE_2D);
-	//SOIL_free_image_data(image);
-	//glBindTexture(GL_TEXTURE_2D, 0);
-
 }
 
 SkyBox::~SkyBox()

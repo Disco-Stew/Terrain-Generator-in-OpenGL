@@ -4,9 +4,6 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-//#include "GameObject.h"
-//#include "PointLight.h"
-
 #include "SOIL.h"
 
 /*
@@ -41,10 +38,5 @@ public:
 	void texture2DSetRepeatAndLinear(GLuint texture);
 	void textureSetWrap(GLuint texture);
 	void loadTextureWithImage2D(GLuint texture, char* imagePath, GLuint textureSampler);
-
-	//Calculate closest pointlights
-	//std::vector<PointLight> Helper::calculateClosestLightsToObject(GameObject gameObject, std::vector<PointLight> &objectList, int numberOfObjectsToReturn);
-
-
 };
 

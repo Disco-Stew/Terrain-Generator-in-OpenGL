@@ -5,12 +5,6 @@ FractalNoise::FractalNoise(GLint iterations, GLint seed, GLfloat roughness)
 	: Noise()
 {
 	srand(seed);
-	if (iterations < 1 || roughness < 0)
-	{
-		// handle error
-	}
-
-
 	this->iterations = iterations;
 
 	// (2 to the power n) + 1
@@ -108,14 +102,12 @@ GLvoid FractalNoise::makeTexture()
 			{
 				diamond(j, k, r, rough);
 			}
-
 		}
 			
 		if (s > 0)
 		{
 			for (GLint j = 0; j <= divisions; j += s)
 			{
-
 				for (GLint k = (j + s) % r; k <= divisions; k += r)
 				{
 					square(j - s, k - s, r, rough);

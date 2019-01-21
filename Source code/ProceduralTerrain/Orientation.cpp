@@ -99,7 +99,6 @@ void Orientation::setScaleZ(GLfloat z)
 	updateModelMatrix();
 }
 
-
 void Orientation::setRotationAxis(glm::vec3 vector)
 {
 	mRotationAxis = vector;
@@ -121,7 +120,6 @@ void Orientation::setRotationAngle(GLfloat angleDegrees)
 	updateModelMatrix();
 }
 
-
 void Orientation::updateLocalAxis()
 {
 
@@ -133,8 +131,6 @@ void Orientation::updateLocalAxis()
 	mRight = rotateVector(mRight, mRotationAxis, mRotationAngle);
 	mUp = rotateVector(mUp, mRotationAxis, mRotationAngle);
 	mForward = rotateVector(mForward, mRotationAxis, mRotationAngle);
-
-
 }
 
 glm::vec3 Orientation::rotateVector(glm::vec3 vectorToRotate, glm::vec3 axis, GLfloat theta)
@@ -154,7 +150,6 @@ glm::vec3 Orientation::rotateVector(glm::vec3 vectorToRotate, glm::vec3 axis, GL
 		+ vectorToRotate.z * glm::cos(theta)
 		+ (-v * vectorToRotate.x + u * vectorToRotate.y) * glm::sin(theta);
 	return glm::vec3((float)xPrime, (float)yPrime, (float)zPrime);
-
 }
 
 glm::mat4 Orientation::updateModelMatrix()

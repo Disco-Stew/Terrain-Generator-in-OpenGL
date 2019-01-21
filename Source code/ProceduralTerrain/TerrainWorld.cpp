@@ -4,8 +4,6 @@
 
 TerrainWorld::TerrainWorld()
 {
-	//water = new Water(256, 256, 4, 32, 32, "Texture/water.jpg");
-	
 	terrain = new Terrain();
 	
 	float height;
@@ -21,9 +19,7 @@ TerrainWorld::~TerrainWorld()
 
 void TerrainWorld::update(GLfloat deltaTime)
 {
-	//terrainGenerator->update(deltaTime, camera);
 	camera.move(deltaTime);
-
 }
 
 void TerrainWorld::draw(GLfloat deltaTime)
@@ -31,9 +27,7 @@ void TerrainWorld::draw(GLfloat deltaTime)
 	glm::mat4 view = camera.getView();
 	glm::mat4 projection = camera.getProjection();
 	
-	
 	terrain->Render(view, projection);
-	//water->Render(view, projection, deltaTime);
 	
 	glDepthFunc(GL_LEQUAL);
 	skyBox.draw(camera.getView());

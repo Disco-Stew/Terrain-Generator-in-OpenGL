@@ -26,7 +26,6 @@ Camera::Camera(glm::vec3 newCameraPosition, glm::vec3 newCameraTarget)
 	cameraPosition = newCameraPosition;
 	cameraTarget = newCameraTarget;
 	upVector = glm::vec3(0.0f, 1.0f, 0.0f);
-
 }
 
 Camera::~Camera()
@@ -96,7 +95,6 @@ void Camera::move(GLfloat deltaTime)
 //update where the camera should be facing so that the lookAt can be calculated
 void Camera::updateFront(GLfloat xPosition, GLfloat yPosition)
 {
-	
 	if (firstMouseInWindow)
 	{
 		lastXPosition = xPosition;
@@ -130,8 +128,9 @@ void Camera::updateFront(GLfloat xPosition, GLfloat yPosition)
 	cameraFront.y = sin(glm::radians(pitch));
 	cameraFront.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
 
+	// Normalize the vectors, because their length gets closer to 0 the more you look up or down which results in slower movement.
 	cameraFront = glm::normalize(cameraFront);
-	rightVector = glm::normalize(glm::cross(cameraFront, glm::vec3(0.0f,1.0f,0.0f)));  // Normalize the vectors, because their length gets closer to 0 the more you look up or down which results in slower movement.
+	rightVector = glm::normalize(glm::cross(cameraFront, glm::vec3(0.0f,1.0f,0.0f)));  
 	upVector = glm::normalize(glm::cross(rightVector, cameraFront));
 
 	calculateLookAt();

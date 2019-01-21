@@ -1,13 +1,12 @@
+#pragma once
+#include "info.h"
+#include "ProceduralGrid.h"
+
 /*
 Class representing the water plane
 
 Derived from ProceduralGrid, uses WaterTech for rendering.
 */
-
-#pragma once
-#include "info.h"
-#include "ProceduralGrid.h"
-
 class Water : public ProceduralGrid
 {
 public:

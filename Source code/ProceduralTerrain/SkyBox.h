@@ -4,7 +4,6 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-
 #include <SOIL.h>
 
 #include "Shader.h"
@@ -24,7 +23,6 @@ private:
 
 	GLuint texture;
 	std::vector<const GLchar*> faces;
-
 
 public:
 	SkyBox::SkyBox();

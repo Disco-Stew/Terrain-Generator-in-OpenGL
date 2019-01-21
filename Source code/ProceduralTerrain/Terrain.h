@@ -1,7 +1,5 @@
 #pragma once
-
 #include "ProceduralGrid.h"
-
 
 class Terrain : public ProceduralGrid
 {

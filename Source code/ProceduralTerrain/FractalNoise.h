@@ -34,7 +34,6 @@ public:
 
 	GLuint texture;
 
-	// keeping it here for testing
 	GLfloat** map;
 
 };

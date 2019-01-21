@@ -1,10 +1,8 @@
 #pragma once
 #include <glew.h>
-
 #include <iostream>
 #include <String.h>
 #include <sstream>
-
 #include <vector>
 #include <fstream> 
 

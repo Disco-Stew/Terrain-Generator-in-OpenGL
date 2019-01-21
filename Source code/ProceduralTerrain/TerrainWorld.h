@@ -1,22 +1,18 @@
 #pragma once
-
 #include "GameWorld.h"
 #include "info.h"
 #include "Shader.h"
-
 #include "Camera.h"
 #include "SkyBox.h"
 #include "Terrain.h"
-//#include "TerrainGenerator.h"
 #include "Water.h"
-
 
 class TerrainWorld : public GameWorld
 {
 private:
 	Camera camera;
 	SkyBox skyBox;
-	//TerrainGenerator* terrainGenerator;
+	
 	Water* water;
 	Terrain* terrain;
 	GLboolean lines = false;

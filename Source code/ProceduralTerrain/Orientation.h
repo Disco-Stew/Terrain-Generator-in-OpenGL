@@ -3,6 +3,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <glew.h>
+
 class Orientation {
 private:
 	int moveTurn = 1;		 // a turn int
@@ -16,6 +17,7 @@ private:
 	glm::vec3 mUp;           // Local y
 	glm::vec3 mRotationAxis; // Axis about which rotations occur
 	GLfloat mRotationAngle;
+
 	//Transformation matrices
 	glm::mat4 mPositionMatrix;
 	glm::mat4 mRotationMatrix;
@@ -30,7 +32,9 @@ private:
 
 
 public:
+
 	Orientation();
+
 	void setModelMatrix(glm::mat4 matrix);
 	void addPosition(glm::vec3 vector);
 	void setPosition(glm::vec3 vector);

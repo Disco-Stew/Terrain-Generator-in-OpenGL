@@ -1,9 +1,7 @@
 #pragma once
 #include <iostream>
-
 #include <glew.h>
 #include <glfw3.h>
-
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -20,12 +18,17 @@ protected:
 	// state of keys
 	GLboolean keys[1024] = { false };
 
+	//Matrices for camera translation
 	glm::mat4 viewMatrix;
 	glm::mat4 projectionMatrix;
 	glm::mat4 projectionViewMatrix;
 
+	//Position of the camera in the world
 	glm::vec3 cameraPosition;
+
+	//Position of the object the camera is tracking
 	glm::vec3 cameraTarget;
+
 	glm::vec3 cameraFront;
 	glm::vec3 upVector;
 	glm::vec3 rightVector;
@@ -43,6 +46,7 @@ protected:
 	GLfloat cameraSpeed = 500.0f;
 	GLfloat zoom = 45.0f;
 
+	//Boolean to signify whether the camera should be static
 	bool staticCamera;
 
 	void Camera::calculateLookAtForStaticCamera();
