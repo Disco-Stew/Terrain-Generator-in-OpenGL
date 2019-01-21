@@ -1,1 +1,1 @@
-# Terrain-Generator-in-OpenGL
+# Terrain generator in OpenGL
