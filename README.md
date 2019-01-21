@@ -20,3 +20,4 @@ UP and DOWN arrow keys can be used to adjust the camera speed
 ```
 ## ![Alt text](https://i.ibb.co/Tkp8d7B/Terrain-Generator.png)
 
+## ![Alt text](https://i.ibb.co/zQCWDHx/LineMode.png)
