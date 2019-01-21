@@ -3,6 +3,7 @@
 ### Creates a large block of terrain to be used in a larger project to create full scale game maps.
 ### Algorithm uses fractal noise for the randomisation along with some fault lines for extra variation. Fragment shaders are used to texture the land depending on its height.
 
+### Folder structure is in Visual Studio project file, hence why the actual files are not in separate folders.
 ### Contents of the `Live demo` folder should allow the program to run. 
 
 ```
